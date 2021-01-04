@@ -115,9 +115,6 @@ The primary metric used was `AUC Weighted`, which for the best model came in at 
 The algorithm is impressive as it delivers both good recall and precision, which is summarised by both variants of the `F1 score`.
 <br><br>
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
-<br>
-
 **AutoML RunDetails**
 
 The next screenshot is the AutoML RunDetails widget output, showing the experiment as *Completed*, listing all child runs in order of best metric performance.  It includes a visualisation of the performance as a dotplot, with a `cummax` line showing the maximum (best) metric achieved for all child runs.
@@ -201,7 +198,7 @@ I used the SDK to deploy the model by the following steps:
 - call the `get_output` method on the `run` object, with one of the outputs resulting in the `best_run` object.
 - extract the model name from the `best_run` properties and used it as input to the `register_model` of the `run` object to register the best-resulting model
 - use the `download_file` method of the `best_run` object to download the environment `.yml` file and scoring python script
-- instantiate the `InferenceConfig` using the downloaded environment file and scoring script
+- instantiate the `InferenceConfig` using the downloaded scoring script and an environment object created using the environment file
 - create a deployment configuration using the `AciWebservice` class
 - deploy the model, using as input the:
     - registered model object
@@ -229,4 +226,10 @@ The screenshot shows the registered model's deployed endpoint with a `Deployment
 
 ## Screen Recording
 
-https://youtu.be/MmDjKK7qXjY
+The following [screencast](https://youtu.be/MmDjKK7qXjY) demonstrates:
+- A working model
+- Demo of the deployed model
+- Demo of a sample request sent to the endpoint and its response
+- Demo of any additional feature of your model
+
+Here is the link again if you want to cut and paste: https://youtu.be/MmDjKK7qXjY
