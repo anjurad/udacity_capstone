@@ -27,6 +27,7 @@ The `target` column classes include:
 |---|---|
 |0|Not looking for job change|
 |1|Looking for a job change|
+
 <br>
 
 ### Task
@@ -83,6 +84,7 @@ The `AutoML` experiment triggered 40 runs of which 3 were cancelled.  The best-r
 |ExtremeRandomTrees| 0.07142857142857142|
 |ExtremeRandomTrees| 0.07142857142857142|
 |RandomForest| 0.14285714285714285|
+
 <br><br>
 
 The primary metric used was `AUC Weighted`, which for the best model came in at *0.79*.  The additional metrics achieved were as follow:
@@ -110,6 +112,7 @@ The primary metric used was `AUC Weighted`, which for the best model came in at 
 |precision_score_micro|0.7900025774277272|
 |weighted_accuracy|0.8701107131528808|
 |log_loss|0.46104432271721735|
+
 <br><br>
 
 **AutoML Best Run Parameters**
@@ -158,6 +161,7 @@ The parameter search space and ranges/ choices used to optimise the model includ
 |Logistic Regression|C|Inverse of regularization strength; must be a positive float. Like in support vector machines, smaller values specify stronger regularization.|uniform(0.001, 1)|
 |Logistic Regression|Maximum Iterations|Maximum number of iterations taken for the solvers to converge.|choice(range(35,150))|
 |[RFE](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html)| Minimum Features|The number of features to select. If None, half of the features are selected. If integer, the parameter is the absolute number of features to select. If float between 0 and 1, it is the fraction of features to select.|choice(range(5,20))|
+
 <br><br>
 
 ### Results
@@ -171,6 +175,7 @@ The best run, with a `recall score` (primary metric) of 0.744 was based on the f
 |Logistic Regression|C|0.6350352169569567|
 |Logistic Regression|Maximum Iterations (max_iter)|65|
 |RFE| Minimum Features (min_features)|5|
+
 <br>
 
 **Hyperdrive RunDetails widget**
